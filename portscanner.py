@@ -6,14 +6,14 @@ import socket
 
 def scan_ports(target):
     # Display a banner for the start of the scan
-    # '40' multiplied by '*' creates a string consisting of 40 asterisk characters.
+    # '35' multiplied by '*' creates a string consisting of 40 asterisk characters.
     # F-string helps in creating a dynamic banner where the IP address being scanned ('target').
-    print("*" * 40)
+    print("*" * 35)
     print(f"* Scanning: {target} *")
-    print("*" * 40)
+    print("*" * 35)
 
-    # Iterate through ports (1 to 1024)
-    for port in range(1, 1025):
+    # Iterate through ports (1 to 2048)
+    for port in range(1, 2049):
         # Create a socket object for TCP connections
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         
